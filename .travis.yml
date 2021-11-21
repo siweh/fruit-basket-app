@@ -1,14 +1,14 @@
 language: node_js
 
 node_js:
-  - "16.6.1"
+- "16.6.1"
 
 env:
-   - DATABASE_URL=postgresql://localhost:5432/fruit_basket_app
+- DATABASE_URL=postgresql://localhost:5432/fruit_basket_app
 
 before_script:
-  - psql -c 'create database fruit_basket_app;' -U postgres
-  - psql -U postgres -d fruit_basket_app -a -f sql/create-tables.sql
+- psql -c 'create database fruit_basket_app;' -U postgres
+- psql -U postgres -d fruit_basket_app -a -f sql/create-tables.sql
 
 services: 
-  - postgresql
+- postgresql
